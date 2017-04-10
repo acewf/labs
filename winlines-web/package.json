@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "raw-loader": "^0.5.1",
     "babel-core": "6.16.0",
     "babel-eslint": "7.1.1",
     "babel-loader": "6.2.7",

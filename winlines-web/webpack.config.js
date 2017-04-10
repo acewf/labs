@@ -19,7 +19,7 @@ module.exports = {
     filename: "app.js", // string
     // the filename template for entry chunks
 
-    publicPath: "/js/", // string
+    publicPath: "/public", // string
     // the url to the output directory resolved relative to the HTML page
 
     library: "MyLibrary", // string,
@@ -34,14 +34,14 @@ module.exports = {
   module: {
     // configuration regarding modules
     loaders: [
-    {
-      test: /\.js$/,
-      loader: 'babel',
-      query: {
-        presets: ['babili']
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        query: {
+          presets: ['babili']
+        }
       }
-    }
-  ],
+    ],
 
     rules: [
       // rules for modules (configure loaders, parser options, etc.)
@@ -98,7 +98,12 @@ module.exports = {
       { oneOf: [ /* rules */ ] },
       // only use one of these nested rules
 
-      { rules: [ /* rules */ ] },
+      { rules: [
+        {
+          test: /\.frag$/,
+          use: 'raw-loader'
+        }
+      ] },
       // use all of these nested rules (combine with conditions to be useful)
 
       { resource: { and: [ /* conditions */ ] } },
@@ -179,23 +184,23 @@ module.exports = {
   devServer: {
     /*
     proxy: { // proxy URLs to backend development server
-      '/api': 'http://localhost:3000'
-    },
-    */
-    contentBase: path.join(__dirname, 'public'), // boolean | string | array, static file location
-    compress: true, // enable gzip compression
-    historyApiFallback: true, // true for index.html upon 404, object for multiple paths
-    hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
-    https: false, // true for self-signed, object for cert authority
-    noInfo: true, // only errors & warns on hot reload
-    // ...
+    '/api': 'http://localhost:3000'
   },
+  */
+  contentBase: path.join(__dirname, 'public'), // boolean | string | array, static file location
+  compress: true, // enable gzip compression
+  historyApiFallback: true, // true for index.html upon 404, object for multiple paths
+  hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
+  https: false, // true for self-signed, object for cert authority
+  noInfo: true, // only errors & warns on hot reload
+  // ...
+},
 
-  plugins: [
+plugins: [
 
-  ],
-  // list of additional plugins
+],
+// list of additional plugins
 
 
-  /* Advanced configuration (click to show) */
+/* Advanced configuration (click to show) */
 }

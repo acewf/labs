@@ -1,20 +1,20 @@
 require("babel-register");
 import * as PIXI from 'pixi.js';
-import Stage from './stage';
+import Application from './components/Application';
+import DefaultView from './components/DefaultView';
 
 export default new function initialise() {
-    console.log(PIXI);
-    const stage = new Stage();
+  const view = new DefaultView();
+  const app = new Application(view);
 }
-
 
 /*
 /// Async import
 import('starter').then(function(starter) {
-  //
-  console.log(starter);
-  new starter.default('pedro');
+//
+console.log(starter);
+new starter.default('pedro');
 }).catch(function(err) {
-  console.log('Failed to load moment', err);
+console.log('Failed to load moment', err);
 });
 */

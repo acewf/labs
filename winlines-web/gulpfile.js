@@ -1,12 +1,13 @@
 var webpack = require("webpack");
 var runSequence = require('run-sequence');
-var gutil = require("gulp-util");
-var gulp = require("gulp");
 var WebpackConfig = require("./webpack.config.js");
 var WebpackDevServer = require("webpack-dev-server");
-var path    = require("path");
 var BabiliPlugin = require("babili-webpack-plugin");
+var path    = require("path");
+var gutil = require("gulp-util");
+var gulp = require("gulp");
 
+// Gulp tasks
 gulp.task("default", function (done) {
   runSequence("build-dev-webpack", done);
 });
@@ -14,11 +15,10 @@ gulp.task("default", function (done) {
 gulp.task("build", function (done) {
   runSequence("build-webpack", done);
 });
-
+// Build bundle and minify
 gulp.task("build-webpack", function (done) {
     // modify some webpack config options
     var myConfig = Object.assign({}, WebpackConfig);
-
     myConfig.plugins = myConfig.plugins.concat(
         new webpack.DefinePlugin({
             "process.env": {
@@ -39,7 +39,7 @@ gulp.task("build-webpack", function (done) {
         done();
     });
 });
-
+// Create Dev Server
 gulp.task("build-dev-webpack", function (done) {
     var myDevConfig = Object.assign({}, WebpackConfig);
     // create a single instance of the compiler to allow caching
@@ -56,11 +56,8 @@ gulp.task("build-dev-webpack", function (done) {
         if (err) throw new gutil.PluginError("webpack-dev-server", err);
         gutil.log("[webpack-dev-server]", "http://localhost:9000/webpack-dev-server/");
       });
-
-
-
 });
 
-gulp.task("build-dev-webpack-watch", function () {
-    return gulp.watch(["src/**/*"], ["build-dev-webpack"]);
-});
+//gulp.task("build-dev-webpack-watch", function () {
+    //return gulp.watch(["src/**/*"], ["build-dev-webpack"]);
+//});
