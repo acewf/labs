@@ -1,0 +1,261 @@
+smoulder-idle-0.png
+size: 828, 1020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+smoulder-trigger-fx-glow
+  rotate: false
+  xy: 1, 1
+  size: 410, 1016
+  orig: 410, 1016
+  offset: 0, 0
+  index: -1
+smoulder-glow-01
+  rotate: false
+  xy: 413, 1
+  size: 414, 924
+  orig: 414, 924
+  offset: 0, 0
+  index: -1
+smoulder-l-hand
+  rotate: false
+  xy: 413, 927
+  size: 102, 92
+  orig: 102, 92
+  offset: 0, 0
+  index: -1
+smoulder-r-hand
+  rotate: false
+  xy: 517, 927
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+smoulder-trigger-fire-particle-02
+  rotate: false
+  xy: 611, 927
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+
+smoulder-idle-1.png
+size: 962, 996
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+smoulder-glow-02
+  rotate: false
+  xy: 1, 1
+  size: 342, 836
+  orig: 342, 836
+  offset: 0, 0
+  index: -1
+fire-orb-01
+  rotate: false
+  xy: 1, 839
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+fire-orb-02
+  rotate: false
+  xy: 135, 839
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+smoulder-outline
+  rotate: false
+  xy: 345, 1
+  size: 310, 806
+  orig: 310, 806
+  offset: 0, 0
+  index: -1
+reveal-01
+  rotate: false
+  xy: 657, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+smoulder-fire-hair-01
+  rotate: false
+  xy: 345, 809
+  size: 163, 186
+  orig: 163, 186
+  offset: 0, 0
+  index: -1
+smoulder-fire-hair-03
+  rotate: false
+  xy: 510, 809
+  size: 163, 186
+  orig: 163, 186
+  offset: 0, 0
+  index: -1
+smoulder-fire-hair-04
+  rotate: false
+  xy: 675, 803
+  size: 163, 186
+  orig: 163, 186
+  offset: 0, 0
+  index: -1
+smoulder-l-arm
+  rotate: false
+  xy: 840, 803
+  size: 79, 179
+  orig: 79, 179
+  offset: 0, 0
+  index: -1
+
+smoulder-idle-2.png
+size: 918, 802
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+reveal-02
+  rotate: false
+  xy: 1, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+reveal-03
+  rotate: false
+  xy: 307, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+reveal-04
+  rotate: false
+  xy: 613, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+
+smoulder-idle-3.png
+size: 918, 802
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+reveal-05
+  rotate: false
+  xy: 1, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+reveal-06
+  rotate: false
+  xy: 307, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+reveal-07
+  rotate: false
+  xy: 613, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+
+smoulder-idle-4.png
+size: 881, 802
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+reveal-08
+  rotate: false
+  xy: 1, 1
+  size: 304, 800
+  orig: 304, 800
+  offset: 0, 0
+  index: -1
+smoulder-body
+  rotate: false
+  xy: 307, 1
+  size: 205, 680
+  orig: 205, 680
+  offset: 0, 0
+  index: -1
+smoulder-trigger-fire-particle-01
+  rotate: false
+  xy: 307, 683
+  size: 106, 106
+  orig: 106, 106
+  offset: 0, 0
+  index: -1
+smoulder-thigh
+  rotate: false
+  xy: 415, 683
+  size: 99, 106
+  orig: 99, 106
+  offset: 0, 0
+  index: -1
+smoulder-cape
+  rotate: false
+  xy: 514, 1
+  size: 244, 342
+  orig: 244, 342
+  offset: 0, 0
+  index: -1
+smoulder-leg
+  rotate: false
+  xy: 760, 1
+  size: 120, 276
+  orig: 120, 276
+  offset: 0, 0
+  index: -1
+smoulder-r-arm
+  rotate: false
+  xy: 760, 279
+  size: 78, 120
+  orig: 78, 120
+  offset: 0, 0
+  index: -1
+smoulder-fire-hair-02
+  rotate: false
+  xy: 514, 345
+  size: 162, 186
+  orig: 162, 186
+  offset: 0, 0
+  index: -1
+fire-orb-03
+  rotate: false
+  xy: 514, 533
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+fire-orb-04
+  rotate: false
+  xy: 516, 667
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+fire-orb-conjuring
+  rotate: false
+  xy: 648, 533
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+fire-orb-glow
+  rotate: false
+  xy: 650, 667
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+smoulder-head
+  rotate: false
+  xy: 782, 401
+  size: 92, 99
+  orig: 92, 99
+  offset: 0, 0
+  index: -1
+
