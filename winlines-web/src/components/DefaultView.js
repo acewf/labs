@@ -25,8 +25,9 @@ export default class DefaultView extends Container {
       // raptor-json
       this.changeSpine('powerup-json');
       //setTimeout(() => this.changeSpine('spineboy-json'), 2500);
-      //setTimeout(() => this.changeSpine('raptor-json'), 9500);
-      setTimeout(() => this.changeSpine('goblins-json'), 2500);
+      setTimeout(() => this.changeSpine('hero-json'), 2500);
+      //setTimeout(() => this.changeSpine('goblins-json'), 5500);
+      // setTimeout(() => this.changeSpine('goblins-json'), 8500);
     }
 
     changeSpine(spineID){
