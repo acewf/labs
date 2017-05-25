@@ -1,8 +1,9 @@
-import {Container,Graphics} from "pixi.js"
+import {Container,Graphics,Filter} from "pixi.js"
 import BucketView from "./bucket/view"
 import * as SPINE from 'pixi-spine';
-import ResourcesLoader from "./loader/resources-loader"
-// import WinLinesView from "./winlines/view"
+import ResourcesLoader from "./loader/resources-loader";
+import WinLinesView from "./winlines/view";
+import SpineView from "./spines/spines";
 
 export default class DefaultView extends Container {
   constructor() {
@@ -18,39 +19,31 @@ export default class DefaultView extends Container {
     }
 
     loaded(ev){
-      // const winlineView = new WinLinesView(ev.resources);
-      // this.addChild(winlineView);
+      const winlineView = new WinLinesView(ev.resources);
+      this.addChild(winlineView);
       this.resources = ev.resources;
-      // raptor-json
-      // raptor-json
-      this.changeSpine('powerup-json');
+      const spineView = new SpineView(this.bucket);
+      this.addChild(spineView);
+
+      spineView.addSpine('powerup-json', this.resources['powerup-json'] , {x:0,y:0});
+      spineView.addSpine('hero-json', this.resources['hero-json'] , {x:-420,y:0});
+      spineView.addSpine('raptor-json', this.resources['raptor-json'] , {x:220,y:0});
+      setTimeout(() => {
+        // spineView.removeSpine('hero-json')
+      }, 2500);
+      this.loop(spineView);
+
       //setTimeout(() => this.changeSpine('spineboy-json'), 2500);
-      setTimeout(() => this.changeSpine('hero-json'), 2500);
-      //setTimeout(() => this.changeSpine('goblins-json'), 5500);
+      //setTimeout(() => this.changeSpine('hero-json'), 7500);
+      //setTimeout(() => this.changeSpine('raptor-json'), 15500);
       // setTimeout(() => this.changeSpine('goblins-json'), 8500);
     }
 
-    changeSpine(spineID){
-      let data = this.resources[spineID];
-      if(this.animation){
-        this.removeChild(this.animation);
-      }
-      this.animation = new PIXI.spine.Spine(data.spineData);
-      let animation = this.animation;
-      let element = animation.stateData.skeletonData;
-      const x = (this.bucket.width/2);
-      const y = (this.bucket.height/2)+element.height/2;
-      animation.position.set(x,y);
-      this.addChild(animation);
-      const animations = animation.state.data.skeletonData.animations;
-      let animIndex = 0;
-      animation.state.setAnimation(0, animations[0].name, false);
-      animation.state.addListener({ complete: function(track, event) {
-        animation.state.setAnimation(0, animations[animIndex].name, false);
-        animIndex++;
-        if(animIndex>=animations.length){
-          animIndex = 0;
-        }
-      }});
+    loop(spineView){
+        let anim = spineView.randomSpine();
+        spineView.changeEffect(anim,spineView.blurFilter);
+        setTimeout(() => {
+          this.loop(spineView);
+        }, 5500);
     }
 }

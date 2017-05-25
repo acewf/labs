@@ -4,7 +4,7 @@
  import {Container,utils,Filter} from "pixi.js"
 import LineMesh from "./graphic/line-graphic-utils";
 import LinePositionUtils from  "./position/line-position-utils";
-import _fragment from 'raw-loader!./../../shaders/flames.frag';
+import _fragment from './../../shaders/flames.frag';
 let shader;
 
 
