@@ -63,7 +63,6 @@ export default class SpineView extends Container {
 
     randomSpine(){
         const index = Math.round(Math.random()*(this._listOfSpines.length-1));
-        console.log(index);
         return this._listOfSpines[index];
     }
 
