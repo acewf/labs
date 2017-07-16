@@ -12,11 +12,11 @@ export default class ResourcesLoader {
     //loader.add('mpd-json', 'res/mpd/bar-symbol-red.json');
     loader.add('hero-json', 'res/hero/hero-mesh.json');
     //loader.add('goblins-json', 'res/goblins/goblins-mesh.json');
-    loader.add('smoulder-json', 'res/smoulder/smoulder-idle.json');
-    loader.add('spineboy-json', 'res/spineboy/spineboy.json');
-    loader.add('raptor-json', 'res/raptor/raptor.json');
+    //loader.add('smoulder-json', 'res/smoulder/smoulder-idle.json');
+    //loader.add('spineboy-json', 'res/spineboy/spineboy.json');
+    //loader.add('raptor-json', 'res/raptor/raptor.json');
     
-    loader.add('powerup-json', 'res/powerup/powerup.json');
+    //loader.add('powerup-json', 'res/powerup/powerup.json');
 
     loader.load((e)=>{
       callback.call(this,e);

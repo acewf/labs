@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>4.2.2</string>
         <key>fileName</key>
-        <string>/Users/pedro.martins/works/labs/winlines/res/scale-1/sheets/high-res-sheet.tps</string>
+        <string>/Users/pedro.martins/works/labs/winlines-web/public/res/scale-1/sheets/high-res-sheet.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -188,6 +188,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">../source/win-line/pattern.jpg</key>
             <key type="filename">../source/win-line/win-line.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>

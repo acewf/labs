@@ -1,8 +1,17 @@
 {"frames": {
 
+"pattern":
+{
+	"frame": {"x":4,"y":4,"w":170,"h":170},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":170,"h":170},
+	"sourceSize": {"w":170,"h":170},
+	"pivot": {"x":0.5,"y":0.5}
+},
 "win-line":
 {
-	"frame": {"x":4,"y":4,"w":8,"h":36},
+	"frame": {"x":180,"y":4,"w":8,"h":36},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":36},
@@ -14,8 +23,8 @@
 	"version": "1.0",
 	"image": "high-res-sheet-0.png",
 	"format": "RGBA8888",
-	"size": {"w":44,"h":44},
+	"size": {"w":192,"h":192},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:47edb2d6e6787df3be08546545fbe852:c1bd84664f104c0fb074cc4e32fefdfd:bbe8a83bdb438bee5915b263b6d6274e$"
+	"smartupdate": "$TexturePacker:SmartUpdate:5e7a419bf2565183e2beb427111a61d5:7c82a06e06de1391dd6708d57a996121:bbe8a83bdb438bee5915b263b6d6274e$"
 }
 }
