@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "es2015","env"
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "dynamic-import-webpack",
+    ["module-alias", [
+    ]]
+  ]
+}

@@ -1,0 +1,111 @@
+bar-symbol-red-0.png
+size: 486, 490
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+back 01
+  rotate: false
+  xy: 1, 1
+  size: 210, 162
+  orig: 210, 162
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 213, 1
+  size: 221, 138
+  orig: 221, 138
+  offset: 0, 0
+  index: -1
+back 02
+  rotate: false
+  xy: 1, 165
+  size: 220, 134
+  orig: 220, 134
+  offset: 0, 0
+  index: -1
+rim-02
+  rotate: false
+  xy: 1, 301
+  size: 211, 120
+  orig: 211, 120
+  offset: 0, 0
+  index: -1
+rim
+  rotate: false
+  xy: 223, 141
+  size: 202, 100
+  orig: 202, 100
+  offset: 0, 0
+  index: -1
+bottom 02
+  rotate: false
+  xy: 223, 243
+  size: 194, 94
+  orig: 194, 94
+  offset: 0, 0
+  index: -1
+black interior
+  rotate: false
+  xy: 214, 339
+  size: 180, 88
+  orig: 180, 88
+  offset: 0, 0
+  index: -1
+bottom 01
+  rotate: false
+  xy: 1, 423
+  size: 190, 56
+  orig: 190, 56
+  offset: 0, 0
+  index: -1
+letter-A-front
+  rotate: false
+  xy: 193, 429
+  size: 62, 60
+  orig: 62, 60
+  offset: 0, 0
+  index: -1
+side
+  rotate: false
+  xy: 436, 1
+  size: 30, 104
+  orig: 30, 104
+  offset: 0, 0
+  index: -1
+letter-R-back
+  rotate: false
+  xy: 257, 429
+  size: 74, 58
+  orig: 74, 58
+  offset: 0, 0
+  index: -1
+letter-R-front
+  rotate: false
+  xy: 333, 429
+  size: 72, 54
+  orig: 72, 54
+  offset: 0, 0
+  index: -1
+letter-B-back
+  rotate: false
+  xy: 396, 339
+  size: 74, 70
+  orig: 74, 70
+  offset: 0, 0
+  index: -1
+letter-B-front
+  rotate: false
+  xy: 407, 411
+  size: 74, 68
+  orig: 74, 68
+  offset: 0, 0
+  index: -1
+letter-A-back
+  rotate: false
+  xy: 419, 243
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: -1
+
