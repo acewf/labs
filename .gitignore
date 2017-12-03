@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+**/node_modules/
+
+# IntelliJ stuff
+*.idea/*
+*.iws
+*.ipr
+*.iml
+
+# Logs
+logs
+*.log
+.DS_Store

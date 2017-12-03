@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/starter.js"],"names":[],"mappings":"6GAIA,WAJA,KACA,eACA,0BACA,EACA","file":"0.app.js","sourcesContent":["export default class Starter{\n    constructor(name) {\n     console.log('starter-->',name);\n   }\n}\n\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/starter.js\n// module id = 187\n// module chunks = 0"],"sourceRoot":""}

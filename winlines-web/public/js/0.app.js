@@ -1,2 +1,0 @@
-webpackJsonpMyLibrary([0],{187:function(a,b){"use strict";Object.defineProperty(b,"__esModule",{value:!0});b["default"]=class{constructor(e){console.log("starter-->",e)}}}});
-//# sourceMappingURL=0.app.js.map
