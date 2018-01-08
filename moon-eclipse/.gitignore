@@ -1,6 +1,5 @@
 csv/*.csv
 node_modules
-output/
 config.json
 .vscode
 npm-debug*
