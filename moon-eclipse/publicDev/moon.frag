@@ -70,17 +70,20 @@ vec2 random2(vec2 st){
 
 void main(){
     vec2 defaultSt = gl_FragCoord.xy/u_resolution.xy;
-    vec2 st = gl_FragCoord.xy/u_resolution.xy;
+    vec2 st = defaultSt;
     vec3 color = vec3(1.0);
-    st = scale(vec2(1.5)) * st;
-    st -= 0.26;
-    color *= sphereTexture(u_tex0, st).rgb;
+    float ratio = u_resolution.y/u_resolution.x;
+    st = scale(vec2(1.5,1.5*ratio)) * st;
+    st.x -= 0.26;
+    st.y -= 0.25*ratio;
+    
 
     // Calculate sun direction
     float sunTime = u_time*1.3;
     vec3 sunPos = normalize(vec3(cos(sunTime*speedSun-HALF_PI),0.0,sin(speedSun*sunTime-HALF_PI)));
     vec3 surface = normalize(sphereNormals(st)*2.0-1.0);
 
+    color *= sphereTexture(u_tex0, st).rgb;
     // Add Shadows
     color *= dot(sunPos,surface);
 
@@ -95,11 +98,12 @@ void main(){
         float pw = pow(length(st),3.0)*5.0;
         float invPosition = 1.0-length((1.0+sunPos.b)*.5);
         float outRadius = invPosition-pw;
-        //color = white*outRadius;
         color = texture2D(u_tex1, defaultSt).rgb;
         color = mix(color, white,outRadius);
-        // gl_FragColor = texture2D(u_tex1, st.xy).rgb;
     }
+    
+    
+    
 
     gl_FragColor = vec4(color,1.0);
 }
