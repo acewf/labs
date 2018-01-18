@@ -73,9 +73,11 @@ void main(){
     vec2 st = defaultSt;
     vec3 color = vec3(1.0);
     float ratio = u_resolution.y/u_resolution.x;
-    st = scale(vec2(1.5,1.5*ratio)) * st;
-    st.x -= 0.26;
-    st.y -= 0.25*ratio;
+    float scaleRatio = 2.5;
+    mat2 scaleInt = scale(vec2(1.0,1.0*ratio))*scaleRatio;
+    st = scaleInt * st;
+    st.x = (st.x + 0.5 - (scaleRatio/2.0));
+    st.y = (st.y + 0.5 - (scaleRatio*ratio/2.0));
     
 
     // Calculate sun direction
@@ -101,9 +103,6 @@ void main(){
         color = texture2D(u_tex1, defaultSt).rgb;
         color = mix(color, white,outRadius);
     }
-    
-    
-    
 
     gl_FragColor = vec4(color,1.0);
 }

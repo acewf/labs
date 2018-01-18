@@ -136,7 +136,6 @@ module.exports = {
     port: 5001,
     hot: true,
     compress: isProd,
-    host:'192.168.1.108',
     stats: { colors: true }
   }
 };

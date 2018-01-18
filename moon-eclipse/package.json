@@ -1,5 +1,5 @@
 {
-  "name": "buckets-viewer",
+  "name": "moon-eclipse",
   "version": "0.0.1",
   "description": "Create html to list offer buckets",
   "main": "src/index.js",
@@ -17,10 +17,11 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "babel-helpers": "^6.24.1",
     "glslCanvas": "latest"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
