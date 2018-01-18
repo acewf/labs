@@ -18,7 +18,7 @@ uniform sampler2D u_tex1;
 uniform vec2 u_tex1Resolution;
 
 vec3 white = vec3(1.0,1.0,1.0);
-float speedMoon = 0.01;
+float speedMoon = 0.02;
 float speedSun = 0.25;
 
 vec3 sphereNormals(in vec2 uv) {
@@ -79,7 +79,6 @@ void main(){
     st.x = (st.x + 0.5 - (scaleRatio/2.0));
     st.y = (st.y + 0.5 - (scaleRatio*ratio/2.0));
     
-
     // Calculate sun direction
     float sunTime = u_time*1.3;
     vec3 sunPos = normalize(vec3(cos(sunTime*speedSun-HALF_PI),0.0,sin(speedSun*sunTime-HALF_PI)));
