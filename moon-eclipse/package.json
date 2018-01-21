@@ -39,6 +39,7 @@
     "mocha": "^4.0.1",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
+    "stats-js": "^1.0.0-alpha1",
     "style-loader": "0.13.1",
     "webpack": "^3.5.1",
     "webpack-dev-server": "^2.7.0",
