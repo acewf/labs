@@ -15,3 +15,8 @@ canvas{
   height: 100%;
   width: 100%;
 }
+
+#stats{
+  position: absolute;
+  top: 0;
+}
