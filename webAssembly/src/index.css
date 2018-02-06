@@ -1,0 +1,22 @@
+html{
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+canvas{
+  height: 100%;
+  width: 100%;
+}
+
+#stats{
+  position: absolute;
+  top: 0;
+}
