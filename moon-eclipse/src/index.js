@@ -12,14 +12,17 @@ export default class Root{
     this.canvas = canvas;
     this.stats = new Stats();
     document.body.appendChild(canvas);
-    this.glsl = new GlslCanvas(canvas);
-    this.initShader();
-    console.log(Stats);
-    console.log(this.stats);
     document.body.appendChild( this.stats.domElement );
-
+    const options = {
+      fragmentString:moon
+    };
+    this.glsl = new GlslCanvas(canvas,options);
+    console.log(this.glsl.gl);
+    // this.glsl.gl.viewport(0, 0, canvas.width, canvas.height);
+    
     //window.onresize = onresize;
     //window.addEventListener("resize", onresize, false);
+    this.initShader();
     requestAnimationFrame(this.animate);
   }
 
@@ -43,9 +46,9 @@ export default class Root{
     const height =  this.canvas.width*window.devicePixelRatio;
     this.glsl.setUniform("u_time",1.0);
     this.glsl.setUniform('u_resolution', width, height);
-    this.glsl.setUniform("u_tex0","moon.jpg");
-    this.glsl.setUniform("u_tex1","stars-high.jpg");
-    this.glsl.load(moon);
+    this.glsl.setUniform("u_tex0","moonmap.jpg");
+    this.glsl.setUniform("u_tex1","background.jpg");
+    // this.glsl.load(moon);
   }
 }
 

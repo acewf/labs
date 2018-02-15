@@ -1,6 +1,3 @@
-// Author @patriciogv - 2015
-// http://patriciogonzalezvivo.com
-
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -18,6 +15,7 @@ uniform sampler2D u_tex1;
 uniform vec2 u_tex1Resolution;
 
 vec3 white = vec3(1.0,1.0,1.0);
+vec3 black = vec3(0.0,0.0,0.0);
 float speedMoon = 0.02;
 float speedSun = 0.25;
 
@@ -53,7 +51,10 @@ vec4 sphereTexture(in sampler2D _tex, in vec2 _uv) {
     vec2 st = sphereCoords(_uv, 1.0);
 
     float aspect = u_tex0Resolution.y/u_tex0Resolution.x;
-    st.x = fract(st.x*aspect + u_time*speedMoon);
+    // moon from left to right
+    st.x = fract(st.x*aspect - u_time*speedMoon);
+    // moon from right to left
+    // st.x = fract(st.x*aspect + u_time*speedMoon);
 
     return texture2D(_tex, st);
 }
@@ -73,7 +74,11 @@ void main(){
     vec2 st = defaultSt;
     vec3 color = vec3(1.0);
     float ratio = u_resolution.y/u_resolution.x;
-    float scaleRatio = 2.5;
+    float scaleRatio = 5.5;
+
+    if(ratio>0.9){
+        scaleRatio = 3.0;
+    }
     mat2 scaleInt = scale(vec2(1.0,1.0*ratio))*scaleRatio;
     st = scaleInt * st;
     st.x = (st.x + 0.5 - (scaleRatio/2.0));
@@ -81,7 +86,10 @@ void main(){
     
     // Calculate sun direction
     float sunTime = u_time*1.3;
-    vec3 sunPos = normalize(vec3(cos(sunTime*speedSun-HALF_PI),0.0,sin(speedSun*sunTime-HALF_PI)));
+    // sun from right to left
+    //vec3 sunPos = normalize(vec3(cos(sunTime*speedSun-HALF_PI),0.0,sin(speedSun*sunTime-HALF_PI)));
+    // sun from left to right
+    vec3 sunPos =  normalize(vec3(sin(speedSun*sunTime-HALF_PI),0.0,cos(sunTime*speedSun-HALF_PI)));
     vec3 surface = normalize(sphereNormals(st)*2.0-1.0);
 
     color *= sphereTexture(u_tex0, st).rgb;
@@ -94,14 +102,20 @@ void main(){
     float smoothRadius = smoothstep(0.001,border,radius); 
 
     // White highlights
-    if(smoothRadius<border){
+    //if(smoothRadius<border){
         st -=0.5;
         float pw = pow(length(st),3.0)*5.0;
-        float invPosition = 1.0-length((1.0+sunPos.b)*.5);
+        float invPosition = 1.0;//-length((1.0+sunPos.b)*.5);
         float outRadius = invPosition-pw;
-        color = texture2D(u_tex1, defaultSt).rgb;
-        color = mix(color, white,outRadius);
-    }
+        // with stars background
+        //color = texture2D(u_tex1, defaultSt).rgb;
+        // with black background
+        color = black;
+        //color = white*fract(sin(gl_FragCoord.x)*0.2);
+        float multiplie = fract(cos(gl_FragCoord.x)*0.2)*fract(cos(gl_FragCoord.y)*0.2);
+        color = white*outRadius*multiplie;
+        //color = mix(color, white,0.0);
+    //}
 
     gl_FragColor = vec4(color,1.0);
 }
