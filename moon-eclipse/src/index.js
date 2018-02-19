@@ -3,9 +3,6 @@ import Stats from 'stats-js';
 import GlslCanvas from 'glslCanvas';
 import moon from './../publicDev/moon.frag';
 
-
-
-
 export default class Root{
   constructor(props) {
     var canvas = document.createElement("canvas");
@@ -17,7 +14,6 @@ export default class Root{
       fragmentString:moon
     };
     this.glsl = new GlslCanvas(canvas,options);
-    console.log(this.glsl.gl);
     // this.glsl.gl.viewport(0, 0, canvas.width, canvas.height);
     
     //window.onresize = onresize;
