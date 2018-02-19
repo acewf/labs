@@ -1,16 +1,9 @@
-// Our vertex shader is run once for each of these
-// vectors, to determine the final position of the vertex
-// on the screen and pass data off to the fragment shader.
-
 precision mediump float;
 
-
-// Our attributes, i.e. the arrays of vectors in the bunny mesh.
 attribute vec3 aPosition;
 attribute vec3 aNormal;
-
-// This is passed from here to be used in `bunny.frag`.
 varying vec3 vNormal;
+varying vec2 texCoord;
 
 uniform mat4 uProjection;
 uniform mat4 uModel;
@@ -32,11 +25,8 @@ void main() {
   float c = 0.5;
   intensity = pow( c - dot(cameraNormal, modelNormal), p );
 
-  // - `uProjection` will apply our perspective matrix, and
-  // - `uView` will apply our camera transforms.
-  // - `uModel` is unused here, but is traditionally used to
-  //   move the object around the scene.
   float distortion = sin(aPosition.y * frequency + time * speed) * amplitude;
   vec3 newPosition = vec3(aPosition.x + distortion, aPosition.y, aPosition.z);
+  texCoord = vec2(0.0,1.0)+vec2(0.5,-0.5) * (aPosition.xz + 1.0);
   gl_Position = uProjection * modelViewMatrix * vec4(newPosition, 1.0);
 }

@@ -102,20 +102,20 @@ void main(){
     float smoothRadius = smoothstep(0.001,border,radius); 
 
     // White highlights
-    //if(smoothRadius<border){
+    if(smoothRadius<border){
         st -=0.5;
         float pw = pow(length(st),3.0)*5.0;
         float invPosition = 1.0;//-length((1.0+sunPos.b)*.5);
         float outRadius = invPosition-pw;
         // with stars background
-        //color = texture2D(u_tex1, defaultSt).rgb;
+        color = texture2D(u_tex1, defaultSt).rgb;
         // with black background
-        color = black;
+        // color = black;
         //color = white*fract(sin(gl_FragCoord.x)*0.2);
         float multiplie = fract(cos(gl_FragCoord.x)*0.2)*fract(cos(gl_FragCoord.y)*0.2);
         color = white*outRadius*multiplie;
         //color = mix(color, white,0.0);
-    //}
+    }
 
     gl_FragColor = vec4(color,1.0);
 }
