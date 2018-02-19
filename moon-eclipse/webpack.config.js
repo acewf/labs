@@ -83,6 +83,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.(glsl|frag|vert)$/, loader: 'glslify', exclude: /node_modules/ }
     ],
     rules: [
       {
