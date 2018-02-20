@@ -9,6 +9,6 @@ varying vec2 texCoord;
 
 void main() {
   vec3 glow = white * intensity;
-  // gl_FragColor = vec4( glow, glow.r);
-  gl_FragColor = texture2D(texture, texCoord);
+  gl_FragColor = vec4( glow, glow.r);
+  //gl_FragColor = texture2D(texture, texCoord);
 }
