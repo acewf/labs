@@ -134,6 +134,7 @@ module.exports = {
     publicPath: '/',
     inline: true,
     port: 5001,
+    host:'0.0.0.0',
     hot: true,
     compress: isProd,
     stats: { colors: true }

@@ -49,6 +49,7 @@
     "gl-texture2d": "^2.1.0",
     "html-webpack-plugin": "^2.30.1",
     "json-loader": "^0.5.7",
+    "lookat-camera": "^1.0.0",
     "merge-dirs": "^0.2.1",
     "mocha": "^4.0.1",
     "raw-loader": "^0.5.1",
