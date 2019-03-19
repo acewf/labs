@@ -1,0 +1,6 @@
+csv/*.csv
+node_modules
+config.json
+.vscode
+npm-debug*
+.DS_Store
